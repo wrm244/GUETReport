@@ -24,17 +24,17 @@ git clone https://github.com/wrm244/GUETReport.git
 ### 封面
 
 <p align=center>
-<img src="./figures/cover.png" height="750"  alt="cover" align=center />
+![cover](./figures/cover.png)
 </p>
 
 ### 摘要
 <p align=center>
-<img src="./figures/abstract.png" height="750"  alt="abstract" align=center />
+![abstract](./figures/abstract.png")
 </p>
 
 ### 目录
 <p align=center>
-<img src="./figures/contents.png" height="750"  alt="contents" align=center />
+![contents](./figures/contents.png)
 </p>
 
 ## 协议
