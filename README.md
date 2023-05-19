@@ -18,9 +18,13 @@ git clone https://github.com/wrm244/GUETReport.git
 ```
 模版更新频繁，且只维护最新版。如有问题，可以先尝试升级模版，而后根据“反馈问题”一栏进行反馈。
 
-## 封面实例
+## 实例
 
-![cover](./figures/cover.png)
+<img src="./figures/cover.png" height="70%"  alt="cover" align=center />
+
+<img src="./figures/abstract.png" height="70%"  alt="abstract" align=center />
+
+<img src="./figures/contents.png" height="70%"  alt="contents" align=center />
 
 ## 协议
 [MIT](./LICENSE) © 河山 100%
