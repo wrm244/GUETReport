@@ -1,0 +1,85 @@
+% -*-coding: utf-8 -*-
+
+\BiAppChapter{算法}{Algorithms and Codes}
+
+%=========================================================================================
+% \BiSection{算法}{Algorithms}
+
+% 算法描述使用 algorithm2e 宏包，效果如算法~\ref{alg_appB_lms}~所示。
+
+% \begin{algorithm}[ht]
+% 	\caption{LMS~算法详细描述 \label{alg_appB_lms}}
+% 	\IncMargin{2em}
+% 	\DontPrintSemicolon
+% 	\KwIn{$\mbf{x}(k), \quad \mu, \quad \mbf{w}(0)$}
+% 	\KwOut{$y(k), \quad \varepsilon(k)$}
+% 	%
+% 	\For{$k=0,1,\cdots$}{
+% 		$y(k) = \mbf{w}^H(k)\mbf{x}(k)$ \tcp*{output signal}
+% 		$\varepsilon(k) = d(k)-y(k)$ \tcp*{error signal}
+% 		$\mbf{w}(k+1) = \mbf{w}(k)+\mu\varepsilon^{\ast}(k)\mbf{x}(k)$ \tcp*{weight vector update}
+% 	}
+% \end{algorithm}
+
+
+%=========================================================================================
+\BiSection{代码}{Codes} 
+
+源代码使用 listings 宏包，LMS~算法的~Verilog~模块端口声明如代码~\ref{code_appB_lms}~所示。
+
+{\fontsize{10pt}{0.5\baselineskip}\selectfont
+	\begin{lstlisting}[caption={空时~LMS~算法~Verilog~模块端口声明},label={code_appB_lms}]
+int main()
+{
+
+	std::string root_path = "E:\\Code\\heils_mobileface\\heils_mobileface\\heils_mobileface\\images\\lack";
+	std::string suffix = ".jpg";
+	
+	std::vector<std::string> fns;
+	glob(fns, root_path, suffix);
+	//cout << pattern << endl;
+	std::vector<cv::Mat> images;
+
+	size_t face_num = 0;
+	MtcnnDface facedetector = MtcnnDface();
+
+	facedetector.initModel();
+	for (int i = 0; i < fns.size(); i++) {
+		cv::Mat cv_mat = cv::imread(fns[i]);
+		ncnn::Mat ncnn_mat = ncnn::Mat::from_pixels(cv_mat.data, ncnn::Mat::PIXEL_BGR2RGB, cv_mat.cols, cv_mat.rows);
+
+		std::vector<Bbox> finboxes;
+		ptimer pt;
+		//double start = static_cast<double>(cv::getTickCount());
+		facedetector.detect(ncnn_mat, finboxes);
+		//Sleep(1000);
+		double inference = cv::getTickCount();
+		std::cout << "boost timer：" << pt.elapsed() << "秒" << std::endl;
+		//std::cout << "opencv timer：" << (inference - start) / cv::getTickFrequency() << "秒" << std::endl;
+		
+
+		if (finboxes.size() != 0)
+			face_num++;
+		for (auto &box : finboxes)
+		{
+			cv::rectangle(cv_mat, cv::Rect(box.x1, box.y1, box.x2 - box.x1 + 1, box.y2 - box.y1 + 1), cv::Scalar(0, 255, 255), 2);
+			for (int j = 0; j < 5; ++j)
+			{
+				cv::circle(cv_mat, cvPoint(box.ppoint[j], box.ppoint[j + 5]), 2, CV_RGB(0, 255, 0), CV_FILLED);
+			}
+		}
+		cv::imshow("show", cv_mat);
+		cv::waitKey(0);
+	}
+	std::cout<<"image count" << fns.size() <<"face num:"<< face_num << std::endl;
+	
+  	facedetector.releaseModel();
+	
+	return 0;
+}
+
+	\end{lstlisting}
+}
+
+% 在最后一个附录 tex 文件末尾添加以下命令，使研究成果从奇数页开始
+\clearpage{\pagestyle{empty}\cleardoublepage}
