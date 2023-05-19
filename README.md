@@ -20,11 +20,11 @@ git clone https://github.com/wrm244/GUETReport.git
 
 ## 实例
 
-<img src="./figures/cover.png" height="70%"  alt="cover" align=center />
+<img src="./figures/cover.png" height="400"  alt="cover" align=center />
 
-<img src="./figures/abstract.png" height="70%"  alt="abstract" align=center />
+<img src="./figures/abstract.png" height="400"  alt="abstract" align=center />
 
-<img src="./figures/contents.png" height="70%"  alt="contents" align=center />
+<img src="./figures/contents.png" height="400"  alt="contents" align=center />
 
 ## 协议
 [MIT](./LICENSE) © 河山 100%
