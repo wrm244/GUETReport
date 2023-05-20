@@ -35,6 +35,8 @@ git clone https://github.com/wrm244/GUETReport.git
 
 ![contents](./figures/contents.png)
 
+## 软件许可证
+桂林电子科技大学校徽校名图片（桂电标志.pdf 等）的版权归桂林电子科技大学校所有。
 
 ## 协议
 [MIT](./LICENSE) © 河山 100%
