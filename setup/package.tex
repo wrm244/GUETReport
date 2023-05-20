@@ -22,7 +22,7 @@
 \usepackage[sort&compress,numbers]{natbib}			% 支持引用缩写的宏包
 \usepackage{fontspec}		% 字体设置宏包
 \usepackage[absolute]{textpos}
-\usepackage[absolute,showboxes]{textpos}
+
 
 %\usepackage{etoolbox}		% primarily towards LaTeX class and package authors.
 %\usepackage{xltxtra}		% 提供了针对XeTeX的改进，自动调用xunicode宏包
@@ -75,18 +75,20 @@
 
 % 字体设置，Windows自带黑体(simhei.ttf)和宋体(simsun.ttf)
 \defaultfontfeatures{Mapping=tex-text}
-\setsansfont{Arial}
+\setsansfont{NotoSerifSC-Regular.otf}[Path = ./fonts/]
 
 % \setCJKmainfont{SimSun.ttf}
 \setCJKmainfont{NotoSerifSC-Regular.otf}[Path = ./fonts/]
-\setCJKsansfont{SimHei.ttf}
+%\setCJKsansfont{SimHei.ttf}
+\setCJKsansfont{NotoSerifSC-Regular.otf}[Path = ./fonts/]
 
 \setCJKfamilyfont{hei}{NotoSerifSC-Bold.otf}[Path = ./fonts/]
 \newcommand{\hei}{\CJKfamily{hei}}
 
-\setCJKfamilyfont{hanyi}{HYShangWeiShouShuW-1.ttf}[Path = ./fonts/]
-\newcommand{\hanyi}{\CJKfamily{hanyi}}
+%\setCJKfamilyfont{hanyi}{HYShangWeiShouShuW-1.ttf}[Path = ./fonts/]
+%\newcommand{\hanyi}{\CJKfamily{hanyi}}
 
-
+\setCJKfamilyfont{yahei}{NotoSanCN.otf}[Path = ./fonts/]
+\newcommand{\yahei}{\CJKfamily{yahei}}
 
 
