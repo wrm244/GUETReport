@@ -9,9 +9,24 @@ GUETReport 支持 XeLaTeX 引擎，字符编码仅支持 UTF-8。
 
 ## 获取模板
 
-### 下载模版
+### Overleaf
+可以直接使用我们已经上传好的Overleaf在线模板：
 
-普通用户可以直接 `clone` 或者点击下载仓库源代码编译main.tex即可。
+[![Overleaf](https://img.shields.io/badge/Overleaf-GUETReport-green.svg)](https://www.overleaf.com/latex/templates/guetreport/qkvhzyszxscq)
+
+点击 [链接](https://www.overleaf.com/latex/templates/guetreport/qkvhzyszxscq) 即可直接使用。
+
+### 国内Texpage
+可以直接使用我们已经上传好的Texpage在线模板：
+> Texpage的优势是服务器在内地，由国人开发。
+
+[![Texpage](https://img.shields.io/badge/Texpage-GUETReport-green.svg)](https://texpage.com/template/ad704bfa-4d80-4f15-a842-e31ee307fff5)
+
+点击 [链接](https://texpage.com/template/ad704bfa-4d80-4f15-a842-e31ee307fff5) 即可直接使用。
+
+### 本地编译
+
+本地编译可以直接 `clone` 或者点击下载仓库源代码编译main.tex即可。
 
 ```bash
 git clone https://github.com/wrm244/GUETReport.git
