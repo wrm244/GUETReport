@@ -1,5 +1,6 @@
 ## GUETReport：桂林电子科技大学课程(组会)报告tex模板
-
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/wrm244/GUETReport/test-tex.yml)
+![GitHub repo size](https://img.shields.io/github/repo-size/wrm244/GUETReport)
 ### 欢迎使用桂林电子科技大学课程(组会)报告模板
 
 本示例模板是应用桂林电子科技大学课程(组会)报告（非官方）LaTeX 文档类 GUETReport 的一个完整实现，参考自重庆大学组会报告。演示了排版中常用的例子，包括公式、表格、算法、参考文献等。
