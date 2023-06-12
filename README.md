@@ -32,6 +32,32 @@ git clone https://github.com/wrm244/GUETReport.git
 
 点击 [链接](https://texpage.com/template/ad704bfa-4d80-4f15-a842-e31ee307fff5) 即可直接使用。
 
+### Github Action 自动化集成
+
+在仓库中提供CI/CD执行编译渲染PDF流程，你只要FORK这个仓库，然后本地编写或者直接通过github网页直接编写后push到你的github仓库，即可自动渲染,以下是ACTION配置代码：
+```yml
+name: Build LaTeX document
+on:
+    push:
+      branches: [ main ]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: true
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: main.pdf
+          
+```
 
 ## 实例
 
