@@ -66,14 +66,14 @@
 \renewcommand\chaptername{\thechapter}
 \CTEXsetup[name={,}]{chapter}
 \setcounter{secnumdepth}{4} \setcounter{tocdepth}{2}
-\titleformat{\chapter}{\center\sanhao\bf}{\chaptertitlename}{0.5em}{}
+\titleformat{\chapter}{\sanhao\bf}{\chaptertitlename}{0.5em}{}
 \titlespacing{\chapter}{0pt}{-5mm}{5mm}
 \titleformat{\section}{\xiaosan\bfseries}{\thesection}{0.5em}{}
 \titlespacing{\section}{0pt}{3mm}{3mm}
 \titleformat{\subsection}{\sihao\bfseries}{\thesubsection}{0.5em}{}
-\titlespacing{\subsection}{2.13em}{3mm}{3mm}
+\titlespacing{\subsection}{0em}{3mm}{3mm}
 \titleformat{\subsubsection}{\sihao\bfseries}{\thesubsubsection}{0.5em}{}
-\titlespacing{\subsubsection}{2.13em}{3mm}{3mm}
+\titlespacing{\subsubsection}{0em}{3mm}{3mm}
 
 % 重新定义BiChapter命令，可实现标题手动换行，但不影响目录
 \def\BiChapter{\relax\@ifnextchar [{\@BiChapter}{\@@BiChapter}}
