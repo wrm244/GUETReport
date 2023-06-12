@@ -12,6 +12,7 @@ GUETReport 支持 XeLaTeX 引擎，字符编码仅支持 UTF-8。
 
 ### Overleaf
 可以直接使用我们已经上传好的Overleaf在线模板：
+> 但是由于上传模板需要审核周期，更新频繁时候建议GitHub下载
 
 [![Overleaf](https://img.shields.io/badge/Overleaf-GUETReport-green.svg)](https://www.overleaf.com/latex/templates/guetreport/qkvhzyszxscq)
 
